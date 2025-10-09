@@ -1,9 +1,76 @@
-{% extends "base.html"%}
-
+{% extends "base.html" %}
 
 {% block contenido %}
-    <ol>
-        <li><h5>hola</h5></li>
-    </ol>
+<section class="container mt-4">
+    <h2>Animales Exóticos</h2>
+    <p>Aquí se mostrará información sobre animales acuáticos, terrestres y aéreos.</p>
+
+    <h3>🐠 Animales Acuáticos</h3>
+    <h4>Manta raya</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>La manta raya es un pez cartilaginoso que vive en aguas tropicales y subtropicales tanto en zonas costeras como en mar abierto. Se alimenta principalmente de plancton y pequeños organismos que filtra a través de sus branquias. Puede alcanzar entre cinco y siete metros de envergadura. Es un animal tranquilo que nada con movimientos amplios y en ocasiones salta fuera del agua. Generalmente vive sola o en pequeños grupos. Muchas especies están amenazadas debido a la pesca. Se considera uno de los peces más inteligentes porque tiene un cerebro grande en proporción a su cuerpo y muestra comportamientos que parecen de juego.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/manta.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+        <h4>Caballito de mar</h4>
+
+        <div class="col-md-6">
+            <p>El caballito de mar es un pez óseo que habita en los arrecifes, praderas marinas y aguas poco profundas. Su dieta se basa en pequeños crustáceos y zooplancton que aspira con su hocico. Mide entre uno y treinta centímetros según la especie. Suele permanecer sujetado a las algas o corales con su cola. Una característica muy especial es que el macho es quien lleva los huevos en una bolsa hasta que nacen las crías. Varias especies se encuentran en peligro por la pérdida de su hábitat y el comercio ilegal.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/caballito.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+        <h3>🐆 Animales Terrestres</h3>
+        <h4>jaguar</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El jaguar es un mamífero carnívoro que vive en las selvas tropicales, bosques húmedos y sabanas de América. Es un excelente trepador y nadador. Puede llegar a pesar entre sesenta y cien kilogramos. Caza una gran variedad de animales, desde mamíferos medianos hasta reptiles y peces. Es un animal solitario y territorial que se encuentra en peligro debido a la deforestación y la caza furtiva. Su mordida es tan poderosa que puede romper caparazones de tortugas o cráneos de sus presas.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/jaguar.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>Panda Rojo</h4>
+
+        <div class="col-md-6">
+            <p>El panda rojo es un mamífero que vive en los bosques templados del Himalaya y las montañas del norte de Asia. Su dieta se basa en el bambú aunque también come frutas, insectos y huevos. Mide cerca de sesenta centímetros y posee una larga cola que le ayuda a mantener el equilibrio. Es un animal principalmente arbóreo y activo durante el amanecer y el atardecer. Se encuentra en peligro por la fragmentación de su hábitat y la caza. Aunque su nombre lo relacione con el oso panda, no pertenece a la misma familia.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/panda.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+    <h3>🦅 Animales Aéreos</h3>
+        <h4>Aguila arpia</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El águila arpía es una de las aves rapaces más grandes del mundo. Vive en los bosques tropicales de América Central y del Sur. Caza mamíferos que viven en los árboles como perezosos y monos. Tiene una envergadura de hasta dos metros y grandes garras con las que atrapa a sus presas. Construye sus nidos en lo alto de los árboles más grandes. Se encuentra en peligro por la pérdida de su hábitat. Es un símbolo de fuerza y majestuosidad y sus garras pueden compararse con las de un oso pequeño.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/aguila.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>Guacamaya escarlata</h4>
+
+        <div class="col-md-6">
+            <p>La guacamaya escarlata es un ave de colores brillantes que habita en las selvas tropicales y bosques húmedos de América Central y Sudamérica. Se alimenta de frutos, semillas y nueces y a veces consume minerales de las colinas para complementar su dieta. Mide cerca de noventa centímetros incluyendo su larga cola. Es muy social, vive en parejas o pequeños grupos y se comunica con fuertes sonidos. Está amenazada por la pérdida de bosques y el comercio ilegal. Sus colores vivos le permiten camuflarse entre las flores y los frutos del bosque.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/guacamaya.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+</section>
 {% endblock %}
-    
