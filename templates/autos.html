@@ -2,6 +2,66 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<h2>Autos antiguos</h2>
-<p>Aquí se mostrará información sobre autos antiguos.</p>
+<section class="container mt-4">
+    <h2>Vehiculos antiguos</h2>
+    <p>Aquí se mostrará información sobre autos antiguos.</p>
+    <p>El nacimiento de los vehículos marcó una gran revolución en la historia de la humanidad. A finales del siglo XIX comenzaron a desarrollarse los primeros automóviles impulsados por motores de combustión interna. Antes de eso, los medios de transporte eran principalmente carruajes tirados por caballos y trenes de vapor. Los primeros autos eran muy simples y lentos, pero representaban la libertad y el avance de la tecnología. Con el paso de los años, las marcas comenzaron a competir por mejorar el diseño, la potencia y la comodidad, dando origen a los vehículos clásicos que hoy son considerados verdaderas joyas históricas.</p>
+    
+
+    <h4>Ford Model T 1908</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Ford Model T fue uno de los primeros autos producidos en masa gracias a la línea de ensamblaje creada por Henry Ford. Este automóvil transformó la industria automotriz porque permitió que muchas personas pudieran tener su propio vehículo. Era sencillo, resistente y económico, por lo que se convirtió en un símbolo del progreso de principios del siglo XX. Su motor alcanzaba una velocidad máxima de unos setenta kilómetros por hora y podía funcionar con gasolina, etanol o queroseno.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/1908.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>Chevrolet Bel Air 1957</h4>
+
+        <div class="col-md-6">
+            <p>El Chevrolet Bel Air de 1957 es uno de los autos clásicos más recordados por su diseño elegante y su carrocería brillante con detalles cromados. Representa la época dorada de los años cincuenta en Estados Unidos. Este vehículo contaba con un potente motor V8 y era considerado un auto de lujo por su comodidad interior. Su estilo llamativo lo convirtió en un ícono del cine y la cultura popular.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/1957.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+        <h4>Volkswagen Escarabajo 1938</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Volkswagen Escarabajo, también conocido como Beetle, fue creado en Alemania antes de la Segunda Guerra Mundial como un auto popular, pequeño y económico. Con el tiempo se convirtió en uno de los vehículos más vendidos de la historia. Su forma redondeada y su motor trasero lo hacían muy fácil de reconocer. Era confiable, duradero y sencillo de mantener, cualidades que lo hicieron querido en todo el mundo.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/1938.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>Mercedes-Benz 300 SL 1954</h4>
+
+        <div class="col-md-6">
+            <p>El Mercedes-Benz 300 SL es famoso por sus puertas de apertura hacia arriba, conocidas como “alas de gaviota”. Fue uno de los autos más avanzados de su tiempo gracias a su motor potente y su estructura ligera. Este vehículo combinaba velocidad, elegancia y tecnología, siendo considerado uno de los deportivos más bellos jamás fabricados. Representó la unión entre la ingeniería de precisión y el diseño sofisticado alemán.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/1954.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+        <h4>Cadillac Eldorado 1953</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Cadillac Eldorado simboliza el lujo y la elegancia de los autos estadounidenses de los años cincuenta. Tenía una carrocería grande y un motor de alto rendimiento. Su interior era amplio y cómodo, con detalles que reflejaban la modernidad de la época. Era un vehículo pensado para quienes buscaban prestigio y estilo. Hoy en día es una de las piezas más valiosas entre los coleccionistas de autos antiguos.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/1953.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+</section>
 {% endblock %}
