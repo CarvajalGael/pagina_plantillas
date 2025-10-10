@@ -1,7 +1,91 @@
-
 {% extends "base.html" %}
 
 {% block contenido %}
-<h2>Las maravillas del mundo</h2>
-<p>Aquí se mostrará información sobre las maravillas del mundo.</p>
+<section class="container mt-4">
+    <h2>Las maravillas del mundo</h2>
+    <p>Aquí se mostrará información sobre las maravillas del mundo.</p>
+
+    <p>Las Siete Maravillas del Mundo Moderno representan algunas de las construcciones más impresionantes creadas por el ser humano. Estas obras fueron elegidas por su belleza, historia, ingeniería y significado cultural. Cada una refleja el talento y la creatividad de diferentes civilizaciones que dejaron huellas imborrables en la historia de la humanidad.</p>
+    
+
+    <h4>El Coliseo de Roma Italia</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Coliseo Romano es un enorme anfiteatro construido en el siglo I en la ciudad de Roma. Fue escenario de combates entre gladiadores, espectáculos públicos y representaciones teatrales. Su estructura de piedra y concreto ha resistido el paso de los siglos y se considera uno de los símbolos más importantes del Imperio Romano y de la arquitectura antigua.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/coliseo.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>La Gran Muralla China</h4>
+
+        <div class="col-md-6">
+            <p>La Gran Muralla China fue construida hace más de dos mil años para proteger al imperio de invasiones. Se extiende por miles de kilómetros entre montañas, desiertos y valles. Fue levantada con piedra, ladrillo y tierra, y es una de las obras más largas jamás construidas por el ser humano. Hoy es un símbolo de esfuerzo, defensa y unión del pueblo chino.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/china.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+        <h4>Chichén Itzá de México</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>Chichén Itzá fue una ciudad construida por la civilización maya en la península de Yucatán. En su centro se encuentra la pirámide de Kukulkán, una estructura que servía como templo y calendario solar. Durante los equinoccios, la luz del sol crea la ilusión de una serpiente que desciende por las escaleras del templo. Es una de las maravillas más admiradas por su precisión astronómica y su importancia cultural.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/mexico.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+
+        <h4>Machu Picchu de Perú</h4>
+
+        <div class="col-md-6">
+            <p>Machu Picchu es una antigua ciudad inca ubicada en lo alto de los Andes peruanos. Fue construida en el siglo XV y permaneció oculta durante siglos entre las montañas. Su arquitectura combina perfectamente con el entorno natural y demuestra los grandes conocimientos de los incas en ingeniería y agricultura. Hoy es uno de los destinos turísticos más visitados del mundo.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/peru.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+        <h4>El Cristo Redentor de Brasil</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Cristo Redentor es una enorme estatua de Jesús que se alza sobre la ciudad de Río de Janeiro. Tiene treinta metros de altura y fue inaugurado en 1931. Representa la fe y la hospitalidad del pueblo brasileño. Desde su cima se puede admirar una vista espectacular de toda la ciudad, las playas y las montañas que la rodean.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/brasil.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+    <h4>Petra Jordania</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>Petra es una antigua ciudad tallada en roca rosada en medio del desierto de Jordania. Fue la capital del reino nabateo y un importante centro comercial. Sus templos, tumbas y teatros fueron tallados directamente en la piedra, creando una apariencia única. Es conocida como la “ciudad rosa” por el color de sus muros y su aspecto misterioso.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/petra.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+
+    <h4>El Taj Mahal en India</h4>
+
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>El Taj Mahal es un majestuoso mausoleo construido en el siglo XVII por el emperador Shah Jahan en honor a su esposa. Está hecho de mármol blanco y decorado con piedras preciosas. Es considerado una de las mayores muestras de amor de la historia y una joya de la arquitectura musulmana. Su reflejo en los estanques que lo rodean lo convierte en una de las vistas más bellas del mundo.</p>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/india.jpeg') }}" alt="Manta raya" class="img-fluid" />
+        </div>
+    </div>
+</section>
 {% endblock %}
