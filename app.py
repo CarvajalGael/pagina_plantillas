@@ -16,38 +16,37 @@ def animales():
 def autos():
     return render_template("autos.html")
 
-@app.route("/maravillas")
-def maravillas():
-    return render_template("maravillas.html")
-
 @app.route("/registro")
 def registro():
     return render_template("registro.html")
 
-@app.route("/registrando")
-def registrando():
-    return ""  
+@app.route("/maravillas")
+def maravillas():
+    return render_template("maravillas.html")
+
+
 
 @app.route("/registrame", methods=["GET", "POST"])
 def registrame():
-    error = None
     if request.method == "POST":
-        nombre = request.form["nombre"]
+        nombreCompleto = request.form["nombreCompleto"]
         email = request.form["email"]
         password = request.form["password"]
         confirmPassword = request.form["confirmPassword"]
-        fechaNacimiento = request.form["fechaNacimiento"]
-        genero = request.form["genero"]
+        
+        error = None
+        if not nombreCompleto or not email or not password or not confirmPassword:
+            error = "Todos los campos son obligatorios"
         
         if password != confirmPassword:
             error = "La contraseña no coincide"
-
+        
         if error:
             flash(error, 'error')
             return render_template("registro.html")
         else:
             flash(f"¡Registro exitoso para el usuario: {nombreCompleto}!", 'success')
-            return render_template("index.html")  
+            return redirect(url_for('index'))
 
     return render_template("registro.html")
 
@@ -61,3 +60,4 @@ def acercas():
 
 if __name__ == '__main__':
     app.run(debug=True)
+                                                

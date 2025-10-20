@@ -7,17 +7,29 @@
       <h2 class="mb-3 text-center text-dark">Crea una cuenta</h2>
       <p class="fs-6 text-center text-dark">Es rápido y fácil</p>
 
-      <form id="registrationForm" method = "post" action = "/registame">
+      <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% endwith %}
+      </div>
+
+      <form method="POST" action="{{ url_for('registrame') }}" class="formulario-registro">
         <div class="row mb-3">
           <div class="col-md-6">
-            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre" required
-            value="{{ request.form.get('nombreCompleto', '') }}">
+            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre" required value="{{ request.form.get('nombreCompleto', '') }}">
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" id="apellido" name="apellido paterno" placeholder="Apellido paterno" required>
+            <input type="text" class="form-control" id="apellidoPaterno" name="apellido_paterno" placeholder="Apellido paterno" required>
           </div>
           <div class="col-md-6">
-            <input type="text" class="form-control" id="apellido materno" name="apellido materno" placeholder="Apellido materno">
+            <input type="text" class="form-control" id="apellidoMaterno" name="apellido_materno" placeholder="Apellido materno">
           </div>
         </div>
 
@@ -72,7 +84,7 @@
         <div class="mb-3">
           <input type="email" class="form-control mb-2" name="email" required placeholder="Correo electrónico o celular">
           <input type="password" class="form-control" name="password" required placeholder="Contraseña">
-          <input type="confirmPassword" class="form-control" name="confirmPassword" required placeholder="confirmPassword">
+          <input type="password" class="form-control" name="confirmPassword" required placeholder="Confirmar Contraseña">
         </div>
 
         <div class="d-grid">
@@ -82,4 +94,5 @@
     </div>
 
   </div>
+
 {% endblock %}
