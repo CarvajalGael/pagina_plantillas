@@ -45,6 +45,10 @@
             <li class="nav-item">
               <a class="nav-link" href="/registro">Registro</a>
             </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/acercas">Acercas de</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/login">
                 {%if not session.get("usuario_nombre")%}
@@ -53,9 +57,6 @@
                   cerrar Session
                 {% endif  %}
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/acercas">Acercas de</a>
             </li>
           </ul>
         </div>

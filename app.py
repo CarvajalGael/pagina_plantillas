@@ -50,9 +50,24 @@ def registrame():
 
     return render_template("registro.html")
 
-@app.route("/login")
-def login():
-    return render_template("login.html")
+
+def validaLogin():
+    password = request.form.get('password')
+
+    if not email or not password:
+        flash("pr favor de ingresar email y contraseña", "error")
+    elif email not in USUARIOS_REGISTRADOS:
+        flash("Correo no registrado", "error")
+    elif USUARIOS_REGISTRADOS[email]['password'] != password:
+        flash("Contraseña incorrecta", "error")
+    else:
+        session['usuario_email'] = email
+        session['usuario_nombre'] = USUARIOS_REGISTRADOS[email]['nombre']
+        session['logeando'] = True
+
+        flash("Inicio de sesión exitoso", "success")
+        return redirect(url_for('bienvenido'))
+
 
 @app.route("/acercas")
 def acercas():
