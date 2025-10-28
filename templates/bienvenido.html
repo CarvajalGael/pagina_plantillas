@@ -5,6 +5,10 @@
     <div class="card shadow p-4 mx-auto" style="max-width: 500px; background-color: #d8b5f7;">
         <h2 class="text-dark mb-3">¡Bienvenido, {{ nombre }}! </h2>
         <p class="text-dark">Has iniciado sesión correctamente.</p>
+        <div class="col-md-12">
+            <img src="{{ url_for('static', filename='img/bien.jpg') }}" class="img-fluid" />
+        </div>
+        <p>recuerda cerrar session antes de salir de la pagina</p>
     </div>
 </div>
 {% endblock %}
