@@ -20,13 +20,17 @@
         </div>
 
 
-        <form method="POST" action="{{ url_for('validaLogin') }}">
+        <form method="POST" action="{{ url_for('login') }}">
         <div class="mb-3">
             <input type="email" class="form-control" name="email" required placeholder="Correo electrónico" value="{{ request.form.get('email', '') }}">
         </div>
         
         <div class="mb-3">
             <input type="password" class="form-control" name="password" required placeholder="Contraseña">
+        </div>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre" required value="{{ request.form.get('nombreCompleto', '') }}">
         </div>
 
         <div class="d-grid">
